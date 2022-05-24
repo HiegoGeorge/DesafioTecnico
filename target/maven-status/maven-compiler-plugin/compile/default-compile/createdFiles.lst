@@ -1,0 +1,10 @@
+com\example\testetecnico\rest\AnimaisFazendaResource.class
+com\example\testetecnico\service\FazendaService.class
+com\example\testetecnico\repository\AnimaisFazendaRepository.class
+com\example\testetecnico\repository\FazendaRepository.class
+com\example\testetecnico\service\AnimaisFazendaService.class
+com\example\testetecnico\rest\FazendaResource.class
+com\example\testetecnico\swagger\SwaggerDoc.class
+com\example\testetecnico\TesteTecnico1Application.class
+com\example\testetecnico\entities\Fazenda.class
+com\example\testetecnico\entities\AnimaisFazenda.class
