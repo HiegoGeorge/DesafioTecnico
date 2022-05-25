@@ -98,31 +98,31 @@ public class FazendaResourceTest extends AbstractTest{
 	}		
 
 
-	@Test
-	@Transactional
-	public void updateFazenda() throws Exception{	
-		fazendaRepository.saveAndFlush(fazenda);
-		
-		int databaseSizeBeforeUptade = fazendaRepository.findAll().size();		
-		
-		Fazenda updateFazenda = fazendaRepository.findById(fazenda.getId()).get();
-		updateFazenda.setNomeFazenda("capital do boi");		
-		
-		String teste = super.mapToJson(fazenda);
-		
-		this.mockMvc.perform(put("/fazenda/{id}",fazenda.getId())
-		.contentType(MediaType.APPLICATION_JSON)
-		.content(teste))
-		.andExpect(status().isOk())
-		.andExpect(jsonPath("$.id").value(fazenda.getId()))
-		.andExpect(jsonPath("$.nomeFazenda").value(fazenda.getNomeFazenda()));
-		
-		List<Fazenda> list = fazendaRepository.findAll();
-		assertThat(list).hasSize(databaseSizeBeforeUptade);
-		Fazenda fazendaTeste = list.get(list.size() -1);
-		//valida se alteraçao foi realizada na base
-		assertThat(fazendaTeste.getNomeFazenda()).isEqualTo(updateFazenda.getNomeFazenda());			
-	}		
+//	@Test
+//	@Transactional
+//	public void updateFazenda() throws Exception{	
+//		fazendaRepository.saveAndFlush(fazenda);
+//		
+//		int databaseSizeBeforeUptade = fazendaRepository.findAll().size();		
+//		
+//		Fazenda updateFazenda = fazendaRepository.findById(fazenda.getId()).get();
+//		updateFazenda.setNomeFazenda("capital do boi");		
+//		
+//		String teste = super.mapToJson(fazenda);
+//		
+//		this.mockMvc.perform(put("/fazenda/{id}",fazenda.getId())
+//		.contentType(MediaType.APPLICATION_JSON)
+//		.content(teste))
+//		.andExpect(status().isOk())
+//		.andExpect(jsonPath("$.id").value(fazenda.getId()))
+//		.andExpect(jsonPath("$.nomeFazenda").value(fazenda.getNomeFazenda()));
+//		
+//		List<Fazenda> list = fazendaRepository.findAll();
+//		assertThat(list).hasSize(databaseSizeBeforeUptade);
+//		Fazenda fazendaTeste = list.get(list.size() -1);
+//		//valida se alteraçao foi realizada na base
+//		assertThat(fazendaTeste.getNomeFazenda()).isEqualTo(updateFazenda.getNomeFazenda());			
+//	}		
 		
 	
 	@Test

@@ -1,0 +1,4 @@
+com\example\testetecnico\rest\AbstractTest.class
+com\example\testetecnico\rest\AnimaisFazendaResourceTest.class
+com\example\testetecnico\rest\FazendaResourceTest.class
+com\example\testetecnico\TesteTecnico1ApplicationTests.class
