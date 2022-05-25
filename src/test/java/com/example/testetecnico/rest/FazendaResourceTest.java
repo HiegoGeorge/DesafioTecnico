@@ -79,8 +79,7 @@ public class FazendaResourceTest extends AbstractTest{
 	public void criarFazenda() throws Exception{	
 		fazendaRepository.saveAndFlush(fazenda);
 		int databaseSizeBeforeCreate = fazendaRepository.findAll().size();		
-		String teste = super.mapToJson(fazenda);
-				
+		String teste = super.mapToJson(fazenda);				
 
 		em.detach(fazenda);
 		this.mockMvc.perform(post("/fazenda")

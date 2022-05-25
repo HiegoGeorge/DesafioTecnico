@@ -27,15 +27,14 @@ public class AnimaisFazendaResource {
 	private final AnimaisFazendaService animaisFazendaService;	
 	
 	public AnimaisFazendaResource(AnimaisFazendaService animaisFazendaService) {
-		super();
 		this.animaisFazendaService = animaisFazendaService;
 	}
 
 
 	@PostMapping("/animais")
-	public ResponseEntity<List<AnimaisFazenda>> salvarFazenda(@RequestBody List<AnimaisFazenda> listFazenda ) throws URISyntaxException
+	public ResponseEntity<List<AnimaisFazenda>> salvarFazenda(@RequestBody List<AnimaisFazenda> listAnimais ) throws URISyntaxException
 	{
-		animaisFazendaService.save(listFazenda);
+		animaisFazendaService.save(listAnimais);
 		return ResponseEntity.created(new URI("/fazenda/")).build();
 	}
 
