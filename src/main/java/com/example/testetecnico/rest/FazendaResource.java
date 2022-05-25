@@ -40,6 +40,9 @@ public class FazendaResource {
 	@PostMapping("/fazenda")
 	public ResponseEntity<Fazenda> getFazenda(@Valid @RequestBody Fazenda fazenda) throws URISyntaxException
 	{
+		if(fazenda.getId() == null) {
+			log.error("id nao existe!");
+		}
 		
 		Fazenda result = fazendaService.save(fazenda);
 		
