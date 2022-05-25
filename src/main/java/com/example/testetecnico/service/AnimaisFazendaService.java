@@ -34,9 +34,9 @@ public class AnimaisFazendaService {
 	}
 	
 	public AnimaisFazenda update(String id, AnimaisFazenda animais) {
-		animais = findById(id);
-		animais.setTagIdentificacao(animais.getTagIdentificacao());
-		return animaisFazendaRepository.save(animais);
+		AnimaisFazenda animais2 = findById(id);
+		animais2.setTagIdentificacao(animais.getTagIdentificacao());
+		return animaisFazendaRepository.save(animais2);
 	}
 
 	

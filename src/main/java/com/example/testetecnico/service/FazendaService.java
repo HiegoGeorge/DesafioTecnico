@@ -29,9 +29,9 @@ public class FazendaService {
 	
 	
 	public Fazenda update(String id, Fazenda fazenda) {
-		fazenda = findById(id);
-		fazenda.setNomeFazenda(fazenda.getNomeFazenda());
-		return fazendaRepository.save(fazenda);
+		Fazenda fazenda2 = findById(id);
+		fazenda2.setNomeFazenda(fazenda.getNomeFazenda());
+		return fazendaRepository.save(fazenda2);
 	}
 	
 	public void delete(String id) {
