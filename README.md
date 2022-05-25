@@ -34,3 +34,6 @@
 * Rest/Resource ->  Onde são realizadas a chamada e configurada as API's 
 
     ``` É possível gerenciar os verbos HTTP (GET, POST, PUT, DELETE,...) para cada método da classe, permitindo criar todos os acessos Restful para a sua API.```
+    
+* Swagger -> Utilizado para documentar api's. Ao executar o projeto no profile local, vá ate o navegador é digite: 
+ '''http://localhost:8080/swagger-ui/index.html''' , assim poderá observar as api's que o projeto está usando e  exportar para o POSTMAN.
